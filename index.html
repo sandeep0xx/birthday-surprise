@@ -260,6 +260,18 @@
   }
 }
 
+    /* Smooth fade-in for all fade-in elements */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   </style>
   
   <style>
@@ -272,6 +284,7 @@
     justify-content: center;
     gap: 15px;
     margin: 40px 0;
+    margin-bottom: 90px;
   }
 
   .photo-gallery .photo {
@@ -331,7 +344,7 @@
     <p class="fade-in">You are my today, my tomorrow, my always 💖</p>
 
     <!-- Image Section 1 -->
-<section class="image-section fade-in" style="background: #ffe6f0; padding-top: 100px;">
+<section class="image-section fade-in" style="padding-top: 100px;">
   <img src="pic1.jpeg" alt="Kashu 1" class="photo" style="float: left; margin-right: 20px;">
   <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
     You light up my world with your smile ✨
@@ -339,7 +352,7 @@
 </section>
 
 <!-- Image Section 2 -->
-<section class="image-section fade-in" style="background: #fff0f5; padding-top: 100px;">
+<section class="image-section fade-in" style="padding-top: 100px;">
   <img src="pic2.jpeg" alt="Kashu 2" class="photo" style="float: right; margin-left: 20px;">
   <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
     Every moment with you is magical 💖
@@ -347,7 +360,7 @@
 </section>
 
 <!-- Image Section 3 -->
-<section class="image-section fade-in" style="background: #ffe0eb; padding-top: 100px;">
+<section class="image-section fade-in" style="padding-top: 100px;">
   <img src="pic3.jpeg" alt="Kashu 3" class="photo" style="float: left; margin-right: 20px;">
   <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
     You make my heart skip a beat ❤️
@@ -355,7 +368,7 @@
 </section>
 
 <!-- Image Section 4 -->
-<section class="image-section fade-in" style="background: #fff5f8; padding-top: 100px; padding-bottom: 100px;">
+<section class="image-section fade-in" style="padding-top: 100px; padding-bottom: 100px;">
   <img src="pic4.jpeg" alt="Kashu 4" class="photo" style="float: right; margin-left: 20px;">
   <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
     Happy Birthday to my love of a lifetime 🌸
@@ -414,6 +427,7 @@
 
 </body>
 </html>
+
 
 
 

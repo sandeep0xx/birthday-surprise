@@ -18,7 +18,8 @@
     html, body {
       height: 100%;
       overflow-x: hidden;
-      scroll-behavior: smooth; /* enables smooth scrolling */
+      scroll-behavior: smooth;
+      position: relative;
     }
 
     body {
@@ -63,6 +64,7 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
       margin-top: 120px;
       max-width: 90%;
+      display: none;
     }
 
     h2 {
@@ -204,14 +206,8 @@
       transform: translateY(0);
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 480px) {
-      .card {
-        margin-top: 100px;
-        padding: 22px 18px;
-        border-radius: 18px;
-      }
-
+      .card { margin-top: 100px; padding: 22px 18px; border-radius: 18px; }
       h2 { font-size: 2.1rem; }
       .name { font-size: 1.9rem; margin-top: 6px; }
       p { font-size: 1.05rem; line-height: 1.5; margin-top: 10px; }
@@ -275,10 +271,13 @@
     const card = document.getElementById('card');
     const music = document.getElementById('bgMusic');
 
+    // Ensure page starts at the top
+    window.scrollTo(0, 0);
+
     startScreen.addEventListener('click', () => {
       startScreen.style.display = 'none';
-      card.scrollIntoView({behavior: 'smooth'});
       card.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top
       music.currentTime = 10;
       music.play();
       startEmojis();
@@ -293,7 +292,6 @@
       emoji.style.left = Math.random() * 100 + 'vw';
       emoji.style.animationDuration = 5 + Math.random() * 5 + 's';
       document.body.appendChild(emoji);
-
       setTimeout(() => emoji.remove(), 9000);
     }
 
@@ -301,7 +299,6 @@
       setInterval(createEmoji, 500);
     }
 
-    // Scroll animation observer
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

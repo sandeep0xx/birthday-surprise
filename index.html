@@ -152,6 +152,60 @@
       50% { transform: translateY(-12px); }
     }
 
+  
+    /* 📱 Mobile responsiveness */
+    @media (max-width: 480px) {
+      body {
+        padding: 12px;
+      }
+
+      .start-screen h1 {
+        font-size: 2rem;
+      }
+
+      .start-screen p {
+        font-size: 1rem;
+      }
+
+      .card {
+        padding: 22px 18px;
+        border-radius: 18px;
+      }
+
+      h2 {
+        font-size: 2.1rem;
+      }
+
+      .name {
+        font-size: 1.9rem;
+        margin-top: 6px;
+      }
+
+      p {
+        font-size: 1.05rem;
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+
+      .sparkle-line {
+        font-size: 1.2rem;
+      }
+
+      .gift {
+        font-size: 2.6rem;
+        margin: 12px 0;
+      }
+
+      .heart {
+        font-size: 2rem;
+      }
+
+      .footer {
+        font-size: 0.95rem;
+        margin-top: 10px;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -165,11 +219,11 @@
   <!-- Birthday Card -->
   <div class="card" id="card">
     <h2>Happy Birthday 🎉🎂</h2>
-    <div class="name">KASHU</div>
+    <div class="name">KASHU 💖</div>
 
     <div class="sparkle-line">✨ ✨ ✨</div>
 
-    <p>You make my world brighter every single day 💫</p>
+    <p>The love of my life 💞</p>
     <p>Today is all about you 🌸</p>
 
     <div class="gift">🎁</div>
@@ -178,13 +232,10 @@
 
     <div class="footer">Forever yours 💕</div>
   </div>
-    <p>The love of my life 💫</p>
-    <p>May your smile never fade ✨</p>
-    <div class="heart">❤️🥰🎈</div>
-  </div>
+    
 
   <!-- Background Music -->
-  <audio id="bgMusic" loop preload="auto">
+  <audio id="bgMusic" loop>
     <!-- REPLACE THE FILE NAME BELOW -->
     <source src="bday.mp3.mp3" type="audio/mpeg">
   </audio>
@@ -197,7 +248,7 @@
     startScreen.addEventListener('click', () => {
       startScreen.style.display = 'none';
       card.style.display = 'block';
-      music.currentTime = 10;
+      music.currentTime = 45;
       music.play();
       startEmojis();
     });
@@ -222,4 +273,3 @@
 
 </body>
 </html>
-

@@ -220,6 +220,46 @@
       .scroll-section p { font-size: 1rem; max-width: 90%; }
       .photo-box { width: 180px; height: 230px; font-size: 1rem; }
     }
+
+    .image-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* images + text aligned naturally */
+  gap: 20px;
+  min-height: 60vh;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  position: relative;
+}
+
+.image-section img.photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 480px) {
+  .image-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 40px 10px;
+  }
+  .image-section img.photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 !important;
+  }
+  .image-section p {
+    text-align: center;
+    max-width: 90%;
+    font-size: 1rem;
+  }
+}
+
   </style>
   
   <style>
@@ -290,19 +330,38 @@
     <p class="fade-in">Every moment with you feels magical ✨</p>
     <p class="fade-in">You are my today, my tomorrow, my always 💖</p>
 
-    <div class="photo-gallery">
-  <img src="pic1.jpeg" alt="Kashu 1" class="fade-in photo">
-  <img src="pic2.jpeg" alt="Kashu 2" class="fade-in photo">
-  <img src="pic3.jpeg" alt="Kashu 3" class="fade-in photo">
-  <img src="pic4.jpeg" alt="Kashu 4" class="fade-in photo">
-    </div>
+    <!-- Image Section 1 -->
+<section class="image-section fade-in" style="background: #ffe6f0; padding-top: 100px;">
+  <img src="pic1.jpeg" alt="Kashu 1" class="photo" style="float: left; margin-right: 20px;">
+  <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
+    You light up my world with your smile ✨
+  </p>
+</section>
 
+<!-- Image Section 2 -->
+<section class="image-section fade-in" style="background: #fff0f5; padding-top: 100px;">
+  <img src="pic2.jpeg" alt="Kashu 2" class="photo" style="float: right; margin-left: 20px;">
+  <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
+    Every moment with you is magical 💖
+  </p>
+</section>
 
-    <p class="fade-in">Scroll brought you here for a reason 🌸</p>
-    <p class="fade-in">Because you deserve all the love in the world ❤️</p>
+<!-- Image Section 3 -->
+<section class="image-section fade-in" style="background: #ffe0eb; padding-top: 100px;">
+  <img src="pic3.jpeg" alt="Kashu 3" class="photo" style="float: left; margin-right: 20px;">
+  <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
+    You make my heart skip a beat ❤️
+  </p>
+</section>
 
-    <h3 class="section-title fade-in">Once Again… Happy Birthday 🎉</h3>
-  </section>
+<!-- Image Section 4 -->
+<section class="image-section fade-in" style="background: #fff5f8; padding-top: 100px; padding-bottom: 100px;">
+  <img src="pic4.jpeg" alt="Kashu 4" class="photo" style="float: right; margin-left: 20px;">
+  <p style="font-size: 1.3rem; color: #ff4d6d; max-width: 300px;">
+    Happy Birthday to my love of a lifetime 🌸
+  </p>
+</section>
+    
 
   <!-- Background Music -->
   <audio id="bgMusic" loop preload="auto">
@@ -355,5 +414,6 @@
 
 </body>
 </html>
+
 
 

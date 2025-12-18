@@ -221,6 +221,43 @@
       .photo-box { width: 180px; height: 230px; font-size: 1rem; }
     }
   </style>
+  
+  <style>
+  /* Your existing CSS (fonts, animations, card, emojis, etc.) */
+
+  /* Add this new gallery CSS at the very bottom */
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 40px 0;
+  }
+
+  .photo-gallery .photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+  }
+
+  @media (max-width: 480px) {
+    .photo-gallery .photo {
+      width: 150px;
+      height: 150px;
+    }
+  }
+
+  .photo-gallery .photo:hover {
+    transform: scale(1.05);
+    transition: transform 0.4s ease;
+  }
+</style>
+
+
+  
 </head>
 <body>
 
@@ -253,7 +290,13 @@
     <p class="fade-in">Every moment with you feels magical ✨</p>
     <p class="fade-in">You are my today, my tomorrow, my always 💖</p>
 
-    <div class="photo-box fade-in">📸 Your Memories Here</div>
+    <div class="photo-gallery">
+  <img src="pic1.jpg" alt="Kashu 1" class="fade-in photo">
+  <img src="pic2.jpg" alt="Kashu 2" class="fade-in photo">
+  <img src="pic3.jpg" alt="Kashu 3" class="fade-in photo">
+  <img src="pic4.jpg" alt="Kashu 4" class="fade-in photo">
+    </div>
+
 
     <p class="fade-in">Scroll brought you here for a reason 🌸</p>
     <p class="fade-in">Because you deserve all the love in the world ❤️</p>
@@ -312,3 +355,4 @@
 
 </body>
 </html>
+
